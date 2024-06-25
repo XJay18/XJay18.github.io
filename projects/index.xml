@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Junyi Cao</title>
+    <link>//localhost:1313/projects/</link>
+    <description>Recent content in Projects on Junyi Cao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2023 Junyi Cao
+</copyright>
+    <atom:link href="//localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/neuma/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/neuma/</guid>
+      <description>&lt;!DOCTYPE html&gt;&#xD;NeuMA&#xD;Abstract&#xD;Results&#xD;NeuMA: Neural Material Adaptor for Visual Grounding of Intrinsic Dynamics&#xD;Junyi Cao1&#xD;Shanyan Guan2&#xD;Yanhao Ge2&#xD;Wei Li2&#xD;Xiaokang Yang1&#xD;Chao Ma1&#xD;1: MoE Key Lab of Artificial Intelligence, AI Institute, Shanghai Jiao Tong University&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;2: vivo Mobile Communication Co. Ltd&#xD;[PDF]&amp;nbsp;&amp;nbsp;&#xD;[Code]&amp;nbsp;&amp;nbsp;&#xD;[Data]&#xD;Abstract&#xD;While humans effortlessly discern intrinsic dynamics and adapt to new scenarios, modern AI systems often struggle. Current methods for visual grounding of dynamics either use pure neural-network-based simulators (black box), which may violate physical laws, or traditional physical simulators (white box), which rely on expert-defined equations that may not fully capture actual dynamics.</description>
+    </item>
+  </channel>
+</rss>

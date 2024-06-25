@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project page for NeuMA"/>
+    <link rel="shortcut icon" href="assets/neuma/duck.ico">
+    <meta property="og:title" content="NeuMA" />
+    <meta property="og:description" content="Project page for NeuMA" />
+
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/index.css">
+
+    <!-- For KaTex Support -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+            // customised options
+            // • auto-render specific keys, e.g.:
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            // • rendering keys, e.g.:
+            throwOnError : false
+            });
+        });
+    </script>
+
+    <title>NeuMA</title>
+</head>
+<body>
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo"><i class="nav__icon nav__home_icon"></i></a>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list grid">
+                <li class="nav__item">
+                    <a href="#section-1" class="nav__link">Abstract</a>
+                </li>
+                <li>
+                    <a href="#section-2" class="nav__link">Results</a>
+                </li>
+            </ul>
+            <i class="nav__close nav__icon nav__close_icon" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+            <i class="nav__toggle nav__icon nav__toggle_icon" id="nav-toggle"></i>
+        </div>
+    </nav>
+</header>
+
+<!--==================== MAIN ====================-->
+<main class="main">
+    <div class="paper__content-dummy"></div>
+    <!--==================== HOME ====================-->
+    <a class="anchor" id="home"></a>
+    <section class="home section container">
+        <div class="paper__title">
+            NeuMA: Neural Material Adaptor for Visual Grounding of Intrinsic Dynamics
+        </div>
+        <!-- <div class="paper__section-grid" style="grid-template-columns: repeat(1, 1fr)">
+            <div class="paper__venue">MY_VENUE</div>
+        </div> -->
+        <div class="paper__section-grid" style="grid-template-columns: repeat(6, 1fr)">
+            <div class="paper__author"><a href="https://xjay18.github.io" target="_blank">Junyi Cao</a><sup>1</sup></div>
+            <div class="paper__author"><a href="https://syguan96.github.io" target="_blank">Shanyan Guan</a><sup>2</sup></div>
+            <div class="paper__author"><a href="">Yanhao Ge</a><sup>2</sup></div>
+            <div class="paper__author"><a href="">Wei Li</a><sup>2</sup></div>
+            <div class="paper__author"><a href="https://scholar.google.com/citations?user=yDEavdMAAAAJ" target="_blank">Xiaokang Yang</a><sup>1</sup></div>
+            <div class="paper__author"><a href="https://vision.sjtu.edu.cn" target="_blank">Chao Ma</a><sup>1</sup></div>
+        </div>
+        <div class="paper__section-grid" style="grid-template-columns: repeat(1, 1fr); margin-top: 1rem; margin-bottom: 0">
+            <div class="paper__affiliation">1: MoE Key Lab of Artificial Intelligence, AI Institute, Shanghai Jiao Tong University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2: vivo Mobile Communication Co. Ltd</div>
+        </div>
+        <div class="paper__section-grid" style="grid-template-columns: repeat(1, 1fr); margin-top: 1rem; margin-bottom: 2rem">
+            <div class="paper__attribute">
+                <!-- <a href="">[PDF]</a>&nbsp;&nbsp; -->
+                <!-- <a href="">[Code]</a>&nbsp;&nbsp; -->
+                <!-- <a href="">[Data]</a> -->
+                [PDF]&nbsp;&nbsp;
+                [Code]&nbsp;&nbsp;
+                [Data]
+            </div>
+        </div>
+        <div class="paper__section-grid" id="teaser" style="grid-template-columns: 1fr">
+            <div>
+                <div style="width: 80%; margin: auto; justify-content: center; align-items: center;">
+                    <img src="assets/neuma/neuma_arch.png">
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <a class="anchor" id="section-1"></a>
+        <div class="paper__section-title">Abstract</div>
+        <div class="example-container">
+            <p>
+                While humans effortlessly discern intrinsic dynamics and adapt to new scenarios, modern AI systems often struggle. Current methods for visual grounding of dynamics either use pure neural-network-based simulators (black box), which may violate physical laws, or traditional physical simulators (white box), which rely on expert-defined equations that may not fully capture actual dynamics. We propose the Neural Material Adaptor (<i>NeuMA</i>), which integrates existing physical laws with learned corrections, facilitating accurate learning of actual dynamics while maintaining the generalizability and interpretability of physical priors. Additionally, we propose Particle-GS, a particle-driven 3D Gaussian Splatting variant that bridges simulation and observed images, allowing back-propagate image gradients to optimize the simulator. Comprehensive experiments on various dynamics in terms of grounded particle accuracy, dynamic rendering quality, and generalization ability demonstrate that NeuMA can accurately capture intrinsic dynamics.
+            </p>
+        </div>
+    </section>
+    <a class="anchor" id="section-2"></a>
+    <section class="section container">
+        <div class="paper__section-title">Results</div>
+        <div class="example-container">
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Dynamics Reconstruction $\triangleleft$
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">Prior<br>$\mathcal{M}_0$</div>
+                            <div style="text-align: center;">NeuMA<br>$\mathcal{M}_0+\Delta\mathcal{M}_\theta$</div>
+                            <div style="text-align: center;">Observation<br>$\mathrm{GT}$</div>
+                        </div>
+                        <img src="assets/neuma/bouncy-prior-pred-gt.gif" alt="BouncyBall" style="width: 95%;">
+                    </div>
+                    <div>
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">Prior<br>$\mathcal{M}_0$</div>
+                            <div style="text-align: center;">NeuMA<br>$\mathcal{M}_0+\Delta\mathcal{M}_\theta$</div>
+                            <div style="text-align: center;">Observation<br>$\mathrm{GT}$</div>
+                        </div>
+                        <img src="assets/neuma/jelly-prior-pred-gt.gif" alt="JellyDuck" style="width: 95%;">
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <img src="assets/neuma/rubber-prior-pred-gt.gif" alt="RubberPawn" style="width: 95%;">
+                    </div>
+                    <div>
+                        <img src="assets/neuma/clay-prior-pred-gt.gif" alt="ClayCat" style="width: 95%;">
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <img src="assets/neuma/honey-prior-pred-gt.gif" alt="HoneyBottle" style="width: 95%;">
+                    </div>
+                    <div>
+                        <img src="assets/neuma/sand-prior-pred-gt.gif" alt="SandFish" style="width: 95%;">
+                    </div>
+                </div>
+
+                <div style="height: 10px;"></div>
+            </div>
+            
+            <div style="height: 20px;"></div>
+
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Dynamics Interpolation $\triangleleft$
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(7, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">$\mathcal{M}_0$</div>
+                            <div style="text-align: center;">$w=1/16$</div>
+                            <div style="text-align: center;">$w=1/4$</div>
+                            <div style="text-align: center;">$w=1/2$</div>
+                            <div style="text-align: center;">$w=3/4$</div>
+                            <div style="text-align: center;">$w=1$</div>
+                            <div style="text-align: center;">$\mathrm{GT}$</div>
+                        </div>
+                        <img src="assets/neuma/lora-bouncy-pred-gt.gif" alt="BouncyBall-Interpolation" style="width: 95%;">
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; justify-content: center; align-items: center;">
+                    <div>
+                        <img src="assets/neuma/lora-clay-pred-gt.gif" alt="ClayCat-Interpolation" style="width: 95%;">
+                    </div>
+                </div>
+
+                <div style="height: 10px;"></div>
+            </div>
+
+            <div style="height: 20px;"></div>
+
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Dynamics Generalization (Novel Shapes) $\triangleleft$
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(7, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;"><img src="assets/neuma/playdoh.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/duck.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/cat.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/bottle.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/fish.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/duck.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/pawn.ico" style="width: 50%;"></div>
+                        </div>
+                        <img src="assets/neuma/NeurIPS_generalization.gif" alt="Letters-Generalization" style="width: 95%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                    </div>
+                </div>
+                
+                <div style="height: 20px;"></div>
+
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Dynamics Generalization (Multi-obj Interactions) $\triangleleft$
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 80%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;"><img src="assets/neuma/playdoh.ico" style="width: 40%;"></div>
+                            <div style="text-align: center; margin: auto;">interacts with</div>
+                            <div style="text-align: center;"><img src="assets/neuma/cat.ico" style="width: 40%;"></div>
+                        </div>
+                        <img src="assets/neuma/cat_playdoh.gif" alt="Cat-with-Playdoh-MultiInteractions" style="width: 80%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                    </div>
+                    <div>
+                        <div class="paper__section-grid" style="width: 80%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;"><img src="assets/neuma/fish.ico" style="width: 40%;"></div>
+                            <div style="text-align: center; margin: auto;">interacts with</div>
+                            <div style="text-align: center;"><img src="assets/neuma/duck.ico" style="width: 40%;"></div>
+                        </div>
+                        <img src="assets/neuma/fish_duck.gif" alt="Fish-with-Duck-MultiInteractions" style="width: 80%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                    </div>
+                </div>
+                <div style="height: 10px;"></div>
+
+                <div style="height: 10px;"></div>
+            </div>
+
+            <div style="height: 20px;"></div>
+
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Real-world Reconstruction $\triangleleft$
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(2, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">NeuMA</div>
+                            <div style="text-align: center;">Observation</div>
+                        </div>
+                        <img src="assets/neuma/pig_realworld.gif" alt="Pig_Realworld" style="width: 90%;">
+                    </div>
+                    <div>
+                        <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(2, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">NeuMA</div>
+                            <div style="text-align: center;">Observation</div>
+                        </div>
+                        <img src="assets/neuma/dog_realworld.gif" alt="Dog_Realworld" style="width: 90%;">
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: right; align-items: right;">
+                    <p style="font-size: var(--small-font-size);">Note: The real-world data is captured by <a href="#SG">[1]</a></p>
+                </div>
+                
+                <div style="height: 10px;"></div>
+            </div>
+
+            <div style="height: 20px;"></div>
+
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Single-image Dynamics Generation $\triangleleft$
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                        <div>
+                            <img src="assets/neuma/duck.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
+                        </div>
+                        <div>
+                            <img src="assets/neuma/pawn.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
+                        </div>
+                        <div>
+                            <img src="assets/neuma/bottle.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                        <div style="margin: auto;">
+                            <label><input type="radio" value="jelly" name="ikun" onchange="showGif(this)"/></label>
+                        </div>
+                        <div style="margin: auto;">
+                            <label><input type="radio" value="rubber" name="ikun" onchange="showGif(this)"/></label>
+                        </div>
+                        <div style="margin: auto;">
+                            <label><input type="radio" value="honey" name="ikun" onchange="showGif(this)"/></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center; padding-top: 20px; padding-bottom: 10px;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(1, 1fr); margin-left: auto; margin-right: auto;">
+                        <div>
+                            <img id="displayKunkun" src="assets/neuma/kunkun.png" style="width: 50%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: right; align-items: right;">
+                    <p style="font-size: var(--small-font-size);">Note: We integrate NeuMA with an image-to-3D model <a href="#GRM">[2]</a> to obtain these results</p>
+                </div>
+
+                <div style="height: 10px;"></div>
+            </div>
+        </div>
+    </section>
+    <a class="anchor" id="bibtex"></a>
+    <!-- <section class="section container">
+        <div class="paper__section-title">BibTeX</div>
+        <div class="example-container bibtex-container">
+<pre><code>@article{neuma2024cao,
+  author    = {xxx},
+  title     = {NeuMA: Neural Material Adaptor for Visual Grounding of Intrinsic Dynamics},
+  journal   = {xxx},
+  year      = {2024}
+}</code></pre></div>
+    </section> -->
+    <section class="section container">
+        <div class="paper__section-title">Reference</div>
+        <div>
+            <p id="SG">[1]: Zhong et al. Reconstruction and Simulation of Elastic Objects with Spring-Mass 3D Gaussians. arXiv:2403.09434, 2024.</p>
+            <p id="GRM">[2]: Xu et al. GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction and Generation. arxiv:2403.14621, 2024.</p>
+        </div>
+    </section>
+    <section class="section container">
+        <p>This webpage is modified from the template provided <a href="https://github.com/zzyunzhi/template">here</a>.</p>
+    </section>
+</main>
+<script src="./assets/main.js"></script>
+<script src="./assets/neuma/logic.js"></script>
+</body>
+</html>

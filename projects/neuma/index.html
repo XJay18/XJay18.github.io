@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  
+><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Junyi Cao</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="//localhost:1313/css/eureka.min.70a993ab9478a4248773cb70b17695a21370dc86be317f259df44a27ebe778029480e5916b8141e4439fc22575ca1418.css">
+<script defer src="//localhost:1313/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="//localhost:1313/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="//localhost:1313/js/fontawesome.min.9e48e61ee118f32e5693a91858e5f921e76994ec4100feb4853db924a2b3362e41fc93e126df148ee12b77a24e60b700.js"></script>
+<script defer src="https://kit.fontawesome.com/9a1ea591c3.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/images/icon_hu4352b6a1d95823d573c48e962149a79a_29807_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="//localhost:1313/images/icon_hu4352b6a1d95823d573c48e962149a79a_29807_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="&lt;!DOCTYPE html&gt;NeuMAAbstractResultsNeuMA: Neural Material Adaptor for Visual Grounding of Intrinsic DynamicsJunyi Cao1Shanyan Guan2Yanhao Ge2Wei Li2Xiaokang Yang1Chao Ma11: MoE Key Lab of Artificial Intelligence, AI Institute, Shanghai Jiao Tong University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2: vivo Mobile Communication Co. Ltd[PDF]&nbsp;&nbsp;[Code]&nbsp;&nbsp;[Data]AbstractWhile humans effortlessly discern intrinsic dynamics and adapt to new scenarios, modern AI systems often struggle. Current methods for visual grounding of dynamics either use pure neural-network-based simulators (black box), which may violate physical laws, or traditional physical simulators (white box), which rely on expert-defined equations that may not fully capture actual dynamics.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Projects",
+      "item":"//localhost:1313/projects/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"",
+      "item":"//localhost:1313/projects/neuma/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "//localhost:1313/projects/neuma/"
+    },
+    "headline": "Junyi Cao","wordCount":  302 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "Junyi Cao",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "//localhost:1313/images/icon.png"
+        }
+        },
+    "description": "\u003c!DOCTYPE html\u003e\rNeuMA\rAbstract\rResults\rNeuMA: Neural Material Adaptor for Visual Grounding of Intrinsic Dynamics\rJunyi Cao1\rShanyan Guan2\rYanhao Ge2\rWei Li2\rXiaokang Yang1\rChao Ma1\r1: MoE Key Lab of Artificial Intelligence, AI Institute, Shanghai Jiao Tong University\u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp;\u0026nbsp;2: vivo Mobile Communication Co. Ltd\r[PDF]\u0026nbsp;\u0026nbsp;\r[Code]\u0026nbsp;\u0026nbsp;\r[Data]\rAbstract\rWhile humans effortlessly discern intrinsic dynamics and adapt to new scenarios, modern AI systems often struggle. Current methods for visual grounding of dynamics either use pure neural-network-based simulators (black box), which may violate physical laws, or traditional physical simulators (white box), which rely on expert-defined equations that may not fully capture actual dynamics."
+}
+</script><meta property="og:title" content="Junyi Cao" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="//localhost:1313/images/icon.png">
+
+
+<meta property="og:url" content="//localhost:1313/projects/neuma/" />
+
+
+
+
+<meta property="og:description" content="&lt;!DOCTYPE html&gt;NeuMAAbstractResultsNeuMA: Neural Material Adaptor for Visual Grounding of Intrinsic DynamicsJunyi Cao1Shanyan Guan2Yanhao Ge2Wei Li2Xiaokang Yang1Chao Ma11: MoE Key Lab of Artificial Intelligence, AI Institute, Shanghai Jiao Tong University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2: vivo Mobile Communication Co. Ltd[PDF]&nbsp;&nbsp;[Code]&nbsp;&nbsp;[Data]AbstractWhile humans effortlessly discern intrinsic dynamics and adapt to new scenarios, modern AI systems often struggle. Current methods for visual grounding of dynamics either use pure neural-network-based simulators (black box), which may violate physical laws, or traditional physical simulators (white box), which rely on expert-defined equations that may not fully capture actual dynamics." />
+
+
+
+
+<meta property="og:locale" content="en" />
+
+
+
+
+<meta property="og:site_name" content="Junyi Cao" />
+
+
+
+
+
+
+
+
+
+<meta property="article:section" content="projects" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">Junyi Cao</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">About</a>
+            <a href="/files/Resume.pdf" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">CV</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class="lg:col-start-2 bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4"></h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >0001-01-01</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>2 min read</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project page for NeuMA"/>
+    <link rel="shortcut icon" href="assets/neuma/duck.ico">
+    <meta property="og:title" content="NeuMA" />
+    <meta property="og:description" content="Project page for NeuMA" />
+
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/index.css">
+
+    <!-- For KaTex Support -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+            // customised options
+            // • auto-render specific keys, e.g.:
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            // • rendering keys, e.g.:
+            throwOnError : false
+            });
+        });
+    </script>
+
+    <title>NeuMA</title>
+</head>
+<body>
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo"><i class="nav__icon nav__home_icon"></i></a>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list grid">
+                <li class="nav__item">
+                    <a href="#section-1" class="nav__link">Abstract</a>
+                </li>
+                <li>
+                    <a href="#section-2" class="nav__link">Results</a>
+                </li>
+            </ul>
+            <i class="nav__close nav__icon nav__close_icon" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+            <i class="nav__toggle nav__icon nav__toggle_icon" id="nav-toggle"></i>
+        </div>
+    </nav>
+</header>
+
+<!--==================== MAIN ====================-->
+<main class="main">
+    <div class="paper__content-dummy"></div>
+    <!--==================== HOME ====================-->
+    <a class="anchor" id="home"></a>
+    <section class="home section container">
+        <div class="paper__title">
+            NeuMA: Neural Material Adaptor for Visual Grounding of Intrinsic Dynamics
+        </div>
+        <!-- <div class="paper__section-grid" style="grid-template-columns: repeat(1, 1fr)">
+            <div class="paper__venue">MY_VENUE</div>
+        </div> -->
+        <div class="paper__section-grid" style="grid-template-columns: repeat(6, 1fr)">
+            <div class="paper__author"><a href="https://xjay18.github.io" target="_blank">Junyi Cao</a><sup>1</sup></div>
+            <div class="paper__author"><a href="https://syguan96.github.io" target="_blank">Shanyan Guan</a><sup>2</sup></div>
+            <div class="paper__author"><a href="">Yanhao Ge</a><sup>2</sup></div>
+            <div class="paper__author"><a href="">Wei Li</a><sup>2</sup></div>
+            <div class="paper__author"><a href="https://scholar.google.com/citations?user=yDEavdMAAAAJ" target="_blank">Xiaokang Yang</a><sup>1</sup></div>
+            <div class="paper__author"><a href="https://vision.sjtu.edu.cn" target="_blank">Chao Ma</a><sup>1</sup></div>
+        </div>
+        <div class="paper__section-grid" style="grid-template-columns: repeat(1, 1fr); margin-top: 1rem; margin-bottom: 0">
+            <div class="paper__affiliation">1: MoE Key Lab of Artificial Intelligence, AI Institute, Shanghai Jiao Tong University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2: vivo Mobile Communication Co. Ltd</div>
+        </div>
+        <div class="paper__section-grid" style="grid-template-columns: repeat(1, 1fr); margin-top: 1rem; margin-bottom: 2rem">
+            <div class="paper__attribute">
+                <!-- <a href="">[PDF]</a>&nbsp;&nbsp; -->
+                <!-- <a href="">[Code]</a>&nbsp;&nbsp; -->
+                <!-- <a href="">[Data]</a> -->
+                [PDF]&nbsp;&nbsp;
+                [Code]&nbsp;&nbsp;
+                [Data]
+            </div>
+        </div>
+        <div class="paper__section-grid" id="teaser" style="grid-template-columns: 1fr">
+            <div>
+                <div style="width: 80%; margin: auto; justify-content: center; align-items: center;">
+                    <img src="assets/neuma/neuma_arch.png">
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <a class="anchor" id="section-1"></a>
+        <div class="paper__section-title">Abstract</div>
+        <div class="example-container">
+            <p>
+                While humans effortlessly discern intrinsic dynamics and adapt to new scenarios, modern AI systems often struggle. Current methods for visual grounding of dynamics either use pure neural-network-based simulators (black box), which may violate physical laws, or traditional physical simulators (white box), which rely on expert-defined equations that may not fully capture actual dynamics. We propose the Neural Material Adaptor (<i>NeuMA</i>), which integrates existing physical laws with learned corrections, facilitating accurate learning of actual dynamics while maintaining the generalizability and interpretability of physical priors. Additionally, we propose Particle-GS, a particle-driven 3D Gaussian Splatting variant that bridges simulation and observed images, allowing back-propagate image gradients to optimize the simulator. Comprehensive experiments on various dynamics in terms of grounded particle accuracy, dynamic rendering quality, and generalization ability demonstrate that NeuMA can accurately capture intrinsic dynamics.
+            </p>
+        </div>
+    </section>
+    <a class="anchor" id="section-2"></a>
+    <section class="section container">
+        <div class="paper__section-title">Results</div>
+        <div class="example-container">
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Dynamics Reconstruction $\triangleleft$
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">Prior<br>$\mathcal{M}_0$</div>
+                            <div style="text-align: center;">NeuMA<br>$\mathcal{M}_0+\Delta\mathcal{M}_\theta$</div>
+                            <div style="text-align: center;">Observation<br>$\mathrm{GT}$</div>
+                        </div>
+                        <img src="assets/neuma/bouncy-prior-pred-gt.gif" alt="BouncyBall" style="width: 95%;">
+                    </div>
+                    <div>
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">Prior<br>$\mathcal{M}_0$</div>
+                            <div style="text-align: center;">NeuMA<br>$\mathcal{M}_0+\Delta\mathcal{M}_\theta$</div>
+                            <div style="text-align: center;">Observation<br>$\mathrm{GT}$</div>
+                        </div>
+                        <img src="assets/neuma/jelly-prior-pred-gt.gif" alt="JellyDuck" style="width: 95%;">
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <img src="assets/neuma/rubber-prior-pred-gt.gif" alt="RubberPawn" style="width: 95%;">
+                    </div>
+                    <div>
+                        <img src="assets/neuma/clay-prior-pred-gt.gif" alt="ClayCat" style="width: 95%;">
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <img src="assets/neuma/honey-prior-pred-gt.gif" alt="HoneyBottle" style="width: 95%;">
+                    </div>
+                    <div>
+                        <img src="assets/neuma/sand-prior-pred-gt.gif" alt="SandFish" style="width: 95%;">
+                    </div>
+                </div>
+
+                <div style="height: 10px;"></div>
+            </div>
+            
+            <div style="height: 20px;"></div>
+
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Dynamics Interpolation $\triangleleft$
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(7, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">$\mathcal{M}_0$</div>
+                            <div style="text-align: center;">$w=1/16$</div>
+                            <div style="text-align: center;">$w=1/4$</div>
+                            <div style="text-align: center;">$w=1/2$</div>
+                            <div style="text-align: center;">$w=3/4$</div>
+                            <div style="text-align: center;">$w=1$</div>
+                            <div style="text-align: center;">$\mathrm{GT}$</div>
+                        </div>
+                        <img src="assets/neuma/lora-bouncy-pred-gt.gif" alt="BouncyBall-Interpolation" style="width: 95%;">
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; justify-content: center; align-items: center;">
+                    <div>
+                        <img src="assets/neuma/lora-clay-pred-gt.gif" alt="ClayCat-Interpolation" style="width: 95%;">
+                    </div>
+                </div>
+
+                <div style="height: 10px;"></div>
+            </div>
+
+            <div style="height: 20px;"></div>
+
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Dynamics Generalization (Novel Shapes) $\triangleleft$
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(7, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;"><img src="assets/neuma/playdoh.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/duck.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/cat.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/bottle.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/fish.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/duck.ico" style="width: 50%;"></div>
+                            <div style="text-align: center;"><img src="assets/neuma/pawn.ico" style="width: 50%;"></div>
+                        </div>
+                        <img src="assets/neuma/NeurIPS_generalization.gif" alt="Letters-Generalization" style="width: 95%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                    </div>
+                </div>
+                
+                <div style="height: 20px;"></div>
+
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Dynamics Generalization (Multi-obj Interactions) $\triangleleft$
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 80%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;"><img src="assets/neuma/playdoh.ico" style="width: 40%;"></div>
+                            <div style="text-align: center; margin: auto;">interacts with</div>
+                            <div style="text-align: center;"><img src="assets/neuma/cat.ico" style="width: 40%;"></div>
+                        </div>
+                        <img src="assets/neuma/cat_playdoh.gif" alt="Cat-with-Playdoh-MultiInteractions" style="width: 80%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                    </div>
+                    <div>
+                        <div class="paper__section-grid" style="width: 80%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;"><img src="assets/neuma/fish.ico" style="width: 40%;"></div>
+                            <div style="text-align: center; margin: auto;">interacts with</div>
+                            <div style="text-align: center;"><img src="assets/neuma/duck.ico" style="width: 40%;"></div>
+                        </div>
+                        <img src="assets/neuma/fish_duck.gif" alt="Fish-with-Duck-MultiInteractions" style="width: 80%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                    </div>
+                </div>
+                <div style="height: 10px;"></div>
+
+                <div style="height: 10px;"></div>
+            </div>
+
+            <div style="height: 20px;"></div>
+
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Real-world Reconstruction $\triangleleft$
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div>
+                        <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(2, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">NeuMA</div>
+                            <div style="text-align: center;">Observation</div>
+                        </div>
+                        <img src="assets/neuma/pig_realworld.gif" alt="Pig_Realworld" style="width: 90%;">
+                    </div>
+                    <div>
+                        <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(2, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">NeuMA</div>
+                            <div style="text-align: center;">Observation</div>
+                        </div>
+                        <img src="assets/neuma/dog_realworld.gif" alt="Dog_Realworld" style="width: 90%;">
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: right; align-items: right;">
+                    <p style="font-size: var(--small-font-size);">Note: The real-world data is captured by <a href="#SG">[1]</a></p>
+                </div>
+                
+                <div style="height: 10px;"></div>
+            </div>
+
+            <div style="height: 20px;"></div>
+
+            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
+                <div class="sec_container">
+                    <div class="sec_centered" style="width: 100%; height: 40px;">
+                        $\triangleright$ Single-image Dynamics Generation $\triangleleft$
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                        <div>
+                            <img src="assets/neuma/duck.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
+                        </div>
+                        <div>
+                            <img src="assets/neuma/pawn.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
+                        </div>
+                        <div>
+                            <img src="assets/neuma/bottle.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                        <div style="margin: auto;">
+                            <label><input type="radio" value="jelly" name="ikun" onchange="showGif(this)"/></label>
+                        </div>
+                        <div style="margin: auto;">
+                            <label><input type="radio" value="rubber" name="ikun" onchange="showGif(this)"/></label>
+                        </div>
+                        <div style="margin: auto;">
+                            <label><input type="radio" value="honey" name="ikun" onchange="showGif(this)"/></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center; padding-top: 20px; padding-bottom: 10px;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(1, 1fr); margin-left: auto; margin-right: auto;">
+                        <div>
+                            <img id="displayKunkun" src="assets/neuma/kunkun.png" style="width: 50%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: right; align-items: right;">
+                    <p style="font-size: var(--small-font-size);">Note: We integrate NeuMA with an image-to-3D model <a href="#GRM">[2]</a> to obtain these results</p>
+                </div>
+
+                <div style="height: 10px;"></div>
+            </div>
+        </div>
+    </section>
+    <a class="anchor" id="bibtex"></a>
+    <!-- <section class="section container">
+        <div class="paper__section-title">BibTeX</div>
+        <div class="example-container bibtex-container">
+<pre><code>@article{neuma2024cao,
+  author    = {xxx},
+  title     = {NeuMA: Neural Material Adaptor for Visual Grounding of Intrinsic Dynamics},
+  journal   = {xxx},
+  year      = {2024}
+}</code></pre></div>
+    </section> -->
+    <section class="section container">
+        <div class="paper__section-title">Reference</div>
+        <div>
+            <p id="SG">[1]: Zhong et al. Reconstruction and Simulation of Elastic Objects with Spring-Mass 3D Gaussians. arXiv:2403.09434, 2024.</p>
+            <p id="GRM">[2]: Xu et al. GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction and Generation. arxiv:2403.14621, 2024.</p>
+        </div>
+    </section>
+    <section class="section container">
+        <p>This webpage is modified from the template provided <a href="https://github.com/zzyunzhi/template">here</a>.</p>
+    </section>
+</main>
+<script src="./assets/main.js"></script>
+<script src="./assets/neuma/logic.js"></script>
+</body>
+</html>
+</article>
+
+
+      
+
+      
+
+
+
+      
+
+      
+
+      
+
+
+
+    </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2023 Junyi Cao
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>
