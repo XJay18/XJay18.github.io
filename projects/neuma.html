@@ -110,6 +110,7 @@
     <a class="anchor" id="section-2"></a>
     <section class="section container">
         <div class="paper__section-title">Results</div>
+        <div class="sec_centered" style="font-size: var(--small-font-size);">(Best viewed in a PC instead of a mobile device)</div>
         <div class="example-container">
             <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
                 <div class="sec_container">
@@ -117,21 +118,43 @@
                         $\triangleright$ Dynamics Reconstruction $\triangleleft$
                     </div>
                 </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: space-around; align-items: center;">
+                    <div style="width: 50%;">
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">Prior</div>
+                            <div style="text-align: center;">NeuMA</div>
+                            <div style="text-align: center;">Observation</div>
+                        </div>
+                    </div>
+                    <div style="width: 50%;">
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center;">Prior</div>
+                            <div style="text-align: center;">NeuMA</div>
+                            <div style="text-align: center;">Observation</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: space-around; align-items: center;">
+                    <div style="width: 50%;">
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center; font-size: var(--small-font-size);">$\mathcal{M}_0$</div>
+                            <div style="text-align: center; font-size: var(--small-font-size);">$\mathcal{M}_0+\Delta\mathcal{M}_\theta$</div>
+                            <div style="text-align: center; font-size: var(--small-font-size);">$\mathrm{GT}$</div>
+                        </div>
+                    </div>
+                    <div style="width: 50%;">
+                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                            <div style="text-align: center; font-size: var(--small-font-size);">$\mathcal{M}_0$</div>
+                            <div style="text-align: center; font-size: var(--small-font-size);">$\mathcal{M}_0+\Delta\mathcal{M}_\theta$</div>
+                            <div style="text-align: center; font-size: var(--small-font-size);">$\mathrm{GT}$</div>
+                        </div>
+                    </div>
+                </div>
                 <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
                     <div>
-                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
-                            <div style="text-align: center;">Prior<br>$\mathcal{M}_0$</div>
-                            <div style="text-align: center;">NeuMA<br>$\mathcal{M}_0+\Delta\mathcal{M}_\theta$</div>
-                            <div style="text-align: center;">Observation<br>$\mathrm{GT}$</div>
-                        </div>
                         <img src="assets/neuma/bouncy-prior-pred-gt.gif" alt="BouncyBall" style="width: 95%;">
                     </div>
                     <div>
-                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
-                            <div style="text-align: center;">Prior<br>$\mathcal{M}_0$</div>
-                            <div style="text-align: center;">NeuMA<br>$\mathcal{M}_0+\Delta\mathcal{M}_\theta$</div>
-                            <div style="text-align: center;">Observation<br>$\mathrm{GT}$</div>
-                        </div>
                         <img src="assets/neuma/jelly-prior-pred-gt.gif" alt="JellyDuck" style="width: 95%;">
                     </div>
                 </div>
@@ -284,7 +307,7 @@
                 </div>
 
                 <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
-                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(4, 1fr); margin-left: auto; margin-right: auto;">
                         <div>
                             <img src="assets/neuma/duck.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
                         </div>
@@ -294,19 +317,25 @@
                         <div>
                             <img src="assets/neuma/bottle.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
                         </div>
+                        <div class="sec_centered">
+                            View
+                        </div>
                     </div>
                 </div>
 
                 <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
-                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(3, 1fr); margin-left: auto; margin-right: auto;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(4, 1fr); margin-left: auto; margin-right: auto;">
                         <div style="margin: auto;">
-                            <label><input type="radio" value="jelly" name="ikun" onchange="showGif(this)"/></label>
+                            <label><input type="radio" value="jelly" name="demoNameSelection" onchange="showGifForRadio(this)"/></label>
                         </div>
                         <div style="margin: auto;">
-                            <label><input type="radio" value="rubber" name="ikun" onchange="showGif(this)"/></label>
+                            <label><input type="radio" value="rubber" name="demoNameSelection" onchange="showGifForRadio(this)"/></label>
                         </div>
                         <div style="margin: auto;">
-                            <label><input type="radio" value="honey" name="ikun" onchange="showGif(this)"/></label>
+                            <label><input type="radio" value="honey" name="demoNameSelection" onchange="showGifForRadio(this)"/></label>
+                        </div>
+                        <div class="slide_container" style="display: flex; justify-content: center; align-items: center;">
+                            <input type="range" min="1" max="3" value="1" id="demoViewSelection" style="width: 80px;" onchange="showGifForRange(this)">
                         </div>
                     </div>
                 </div>
@@ -319,9 +348,8 @@
                     </div>
                 </div>
 
-                <div style="width: 90%; margin: auto; display: flex; justify-content: right; align-items: right;">
-                    <br>
-                    <p style="font-size: var(--small-font-size);">Note: Click the above radio button to apply a learned material adaptor. <br/> We integrate NeuMA with an image-to-3D model <a href="#GRM">[2]</a> to obtain these results</p>
+                <div style="width: 80%; margin: auto; display: flex; justify-content: right; align-items: right;">
+                    <p style="font-size: var(--small-font-size);">Note: You can click the above radio button to apply a learned material model and change the view using the slider. We integrate NeuMA with an image-to-3D model <a href="#GRM">[2]</a> to obtain these results</p>
                 </div>
 
                 <div style="height: 10px;"></div>
