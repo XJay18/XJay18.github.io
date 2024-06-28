@@ -211,6 +211,7 @@
 
             <div style="height: 20px;"></div>
 
+            <a class="anchor" id="demo"></a>
             <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
                 <div class="sec_container">
                     <div class="sec_centered" style="width: 100%; height: 40px;">
@@ -218,19 +219,50 @@
                     </div>
                 </div>
 
-                <div style="width: 90%; margin: auto; justify-content: center; align-items: center;">
-                    <div>
-                        <div class="paper__section-grid" style="width: 95%; grid-template-columns: repeat(7, 1fr); margin-left: auto; margin-right: auto;">
-                            <div style="text-align: center;"><img src="assets/neuma/playdoh.ico" style="width: 50%;"></div>
-                            <div style="text-align: center;"><img src="assets/neuma/duck.ico" style="width: 50%;"></div>
-                            <div style="text-align: center;"><img src="assets/neuma/cat.ico" style="width: 50%;"></div>
-                            <div style="text-align: center;"><img src="assets/neuma/bottle.ico" style="width: 50%;"></div>
-                            <div style="text-align: center;"><img src="assets/neuma/fish.ico" style="width: 50%;"></div>
-                            <div style="text-align: center;"><img src="assets/neuma/duck.ico" style="width: 50%;"></div>
-                            <div style="text-align: center;"><img src="assets/neuma/pawn.ico" style="width: 50%;"></div>
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(4, 1fr); margin-left: auto; margin-right: auto;">
+                        <div>
+                            <img src="assets/neuma/duck.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
                         </div>
-                        <img src="assets/neuma/NeurIPS_generalization.gif" alt="Letters-Generalization" style="width: 95%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                        <div>
+                            <img src="assets/neuma/pawn.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
+                        </div>
+                        <div>
+                            <img src="assets/neuma/bottle.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
+                        </div>
+                        <div class="sec_centered">
+                            View
+                        </div>
                     </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(4, 1fr); margin-left: auto; margin-right: auto;">
+                        <div style="margin: auto;">
+                            <label><input type="radio" value="jelly" name="demoNameSelection" onchange="showGifForRadio(this)"/></label>
+                        </div>
+                        <div style="margin: auto;">
+                            <label><input type="radio" value="rubber" name="demoNameSelection" onchange="showGifForRadio(this)"/></label>
+                        </div>
+                        <div style="margin: auto;">
+                            <label><input type="radio" value="honey" name="demoNameSelection" onchange="showGifForRadio(this)"/></label>
+                        </div>
+                        <div class="slide_container" style="display: flex; justify-content: center; align-items: center;">
+                            <input type="range" min="1" max="3" value="1" id="demoViewSelection" style="width: 80px;" onchange="showGifForRange(this)">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center; padding-top: 20px; padding-bottom: 10px;">
+                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(1, 1fr); margin-left: auto; margin-right: auto;">
+                        <div>
+                            <img id="displayKunkun" src="assets/neuma/kunkun.png" style="width: 50%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 80%; margin: auto; display: flex; justify-content: right; align-items: right;">
+                    <p style="font-size: var(--small-font-size);">Note: You can click the above radio button to apply a learned material model and change the view using the slider. We integrate NeuMA with an image-to-3D model <a href="#GRM">[2]</a> to obtain these results</p>
                 </div>
                 
                 <div style="height: 20px;"></div>
@@ -298,62 +330,6 @@
 
             <div style="height: 20px;"></div>
 
-            <a class="anchor" id="demo"></a>
-            <div style="width: 80%; margin: auto; background-color: #e0e0e0; border-radius: 20px;">
-                <div class="sec_container">
-                    <div class="sec_centered" style="width: 100%; height: 40px;">
-                        $\triangleright$ Interactive Demo $\triangleleft$
-                    </div>
-                </div>
-
-                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
-                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(4, 1fr); margin-left: auto; margin-right: auto;">
-                        <div>
-                            <img src="assets/neuma/duck.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
-                        </div>
-                        <div>
-                            <img src="assets/neuma/pawn.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
-                        </div>
-                        <div>
-                            <img src="assets/neuma/bottle.ico" style="width: 20%; padding-top: 0px; padding-bottom: 0px;">
-                        </div>
-                        <div class="sec_centered">
-                            View
-                        </div>
-                    </div>
-                </div>
-
-                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center;">
-                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(4, 1fr); margin-left: auto; margin-right: auto;">
-                        <div style="margin: auto;">
-                            <label><input type="radio" value="jelly" name="demoNameSelection" onchange="showGifForRadio(this)"/></label>
-                        </div>
-                        <div style="margin: auto;">
-                            <label><input type="radio" value="rubber" name="demoNameSelection" onchange="showGifForRadio(this)"/></label>
-                        </div>
-                        <div style="margin: auto;">
-                            <label><input type="radio" value="honey" name="demoNameSelection" onchange="showGifForRadio(this)"/></label>
-                        </div>
-                        <div class="slide_container" style="display: flex; justify-content: center; align-items: center;">
-                            <input type="range" min="1" max="3" value="1" id="demoViewSelection" style="width: 80px;" onchange="showGifForRange(this)">
-                        </div>
-                    </div>
-                </div>
-
-                <div style="width: 90%; margin: auto; display: flex; justify-content: center; align-items: center; padding-top: 20px; padding-bottom: 10px;">
-                    <div class="paper__section-grid" style="width: 90%; grid-template-columns: repeat(1, 1fr); margin-left: auto; margin-right: auto;">
-                        <div>
-                            <img id="displayKunkun" src="assets/neuma/kunkun.png" style="width: 50%; padding-top: 0px; padding-bottom: 0px; border: 1px solid #000000;">
-                        </div>
-                    </div>
-                </div>
-
-                <div style="width: 80%; margin: auto; display: flex; justify-content: right; align-items: right;">
-                    <p style="font-size: var(--small-font-size);">Note: You can click the above radio button to apply a learned material model and change the view using the slider. We integrate NeuMA with an image-to-3D model <a href="#GRM">[2]</a> to obtain these results</p>
-                </div>
-
-                <div style="height: 10px;"></div>
-            </div>
         </div>
     </section>
     <a class="anchor" id="bibtex"></a>
